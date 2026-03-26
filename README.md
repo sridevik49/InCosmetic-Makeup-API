@@ -1,4 +1,4 @@
-# Live https://incosmetics.netlify.app/
+# Live [https://incosmetics.netlify.app/](https://incosmetic.netlify.app/)
 
 # React + Vite
 
