@@ -1,0 +1,289 @@
+/* Fonts and Reset */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@400;500;600;700&family=Bebas+Neue&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.nykaa-wrapper {
+  max-width: 100%;
+  margin: auto;
+  font-family: 'DM Sans', sans-serif;
+  padding-bottom: 40px;
+}
+
+/* Banner */
+.nykaa-banner {
+  position: relative;
+  background: linear-gradient(135deg, #fce4ec, #e1bee7, #d1c4e9);
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.nykaa-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 180px;
+  font-family: 'Bebas Neue';
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 10px;
+}
+
+.banner-text h2 {
+  font-size: 28px;
+}
+
+.banner-text span {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 700;
+}
+
+.banner-text p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Slider */
+.slider-container {
+  position: relative;
+  padding: 0 40px;
+}
+
+.product-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding: 10px 0;
+  scroll-behavior: smooth;
+}
+
+.product-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Card */
+.nykaa-card {
+  width: 190px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f7eef3;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  padding: 14px 12px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.image-box {
+  height: 200px;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.nykaa-card:hover img {
+  transform: scale(1.05);
+}
+
+.card-label {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+}
+
+/* Arrows */
+.arrow-btn {
+  position: absolute;
+  top: 40%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.arrow-btn.left {
+  left: 0;
+}
+
+.arrow-btn.right {
+  right: 0;
+}
+
+/* Button */
+.view-all {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.view-all button {
+  padding: 12px 70px;
+  border: 1.5px solid #FC2779;
+  border-radius: 40px;
+  background: transparent;
+  color: #FC2779;
+  cursor: pointer;
+}
+
+.view-all button:hover {
+  background-color: #FC2779;
+  color: #fff;
+}
+
+/* Skeleton Card */
+.nykaa-card.skeleton {
+  flex: 0 0 190px;
+  height: 300px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeleton-brand {
+  width: 60%;
+  height: 15px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  animation: pulse 1.2s infinite;
+}
+
+.skeleton-img {
+  width: 100%;
+  height: 150px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  animation: pulse 1.2s infinite;
+}
+
+.skeleton-text {
+  width: 90%;
+  height: 14px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  animation: pulse 1.2s infinite;
+}
+
+.skeleton-text.short {
+  width: 50%;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+
+  50% {
+    background-color: #f0f0f0;
+  }
+
+  100% {
+    background-color: #e0e0e0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .nykaa-card {
+    width: 160px;
+  }
+
+  .image-box {
+    height: 170px;
+  }
+
+  .nykaa-card.skeleton {
+    flex: 0 0 160px;
+    height: 270px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nykaa-card {
+    width: 140px;
+  }
+
+  .image-box {
+    height: 150px;
+  }
+
+  .nykaa-card.skeleton {
+    flex: 0 0 140px;
+    height: 250px;
+  }
+
+  .banner-text h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+    padding: 0 20px;
+  }
+
+  .nykaa-card {
+    width: 120px;
+  }
+
+  .image-box {
+    height: 130px;
+  }
+
+  .nykaa-card.skeleton {
+    flex: 0 0 120px;
+    height: 220px;
+  }
+
+  .banner-text h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nykaa-card {
+    width: 100px;
+  }
+
+  .image-box {
+    height: 110px;
+  }
+
+  .nykaa-card.skeleton {
+    flex: 0 0 100px;
+    height: 200px;
+  }
+
+  .banner-text h2 {
+    font-size: 18px;
+  }
+
+  .banner-text p {
+    font-size: 12px;
+  }
+}
